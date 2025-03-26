@@ -1,0 +1,151 @@
+@keyframes spin-reverse {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  .animate-rotate-reverse {
+    animation: spin-reverse 10s linear infinite;
+    
+  }
+  
+
+  .gradient-shade {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%; /* Adjust as needed for the effect */
+    background: linear-gradient(
+      0deg, 
+      rgb(146, 213, 252) 0%, 
+      rgba(151, 240, 239, 0.4) 60%, 
+      rgba(151, 240, 239, 0) 100%
+    );
+    pointer-events: none; /* Ensures it doesn't block interactions */
+     /* Matches the z-index from the provided code */
+  }
+  
+  .radar-image {
+    position: absolute;
+    width: 115%; /* Double the original size */
+    height: auto; /* Maintain aspect ratio */
+    max-width: none; /* Prevent constraints on size */
+    max-height: none; /* Prevent constraints on size */
+    transform: translate(-50%, -50%); /* Center the enlarged image */
+  }
+
+.animate-bounce {
+    animation: bounce 4s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .slider-content {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .quote-btn, .quote-btn1 {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .quote-btn:hover, .quote-btn1:hover {
+    transform: scale(1.05);
+  }
+  
+  .nav-btn {
+    padding: 10px 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .serial-number {
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .serial-number.active .number {
+    color: #0056b3;
+    transform: scale(1.2);
+  }
+  
+  .serial-number.active .heading {
+    color: #0056b3;
+  }
+  
+  .number {
+    color: #666;
+  }
+  
+  .heading {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .serial-number:hover .number,
+  .serial-number:hover .heading {
+    color: #004494;
+  }
+  
+  .animated-line {
+    position: absolute;
+    top: -10px;
+    width: 50px;
+    height: 4px;
+    background-color: #0056b3;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+  }
+  
+  .arrow-container {
+    width: 70px; /* Width of the arrow box */
+    height: 45px; /* Height of the arrow box */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border: 1px solid #dcdcdc; /* Light gray border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .arrow-container:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    color: white;
+    background: blue;
+  }
+  
+  .arrow-icon {
+    font-size: 35px; /* Size of the arrow icon */
+    color: #4a4a4a; /* Dark gray color for the arrow */
+    margin-bottom: 7px;
+  }
+  
+  .arrow-container:hover .arrow-icon {
+    color: white; /* Darker shade for hover */
+  }
+  

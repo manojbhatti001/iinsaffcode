@@ -1,0 +1,73 @@
+/* Add this to your CSS file */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Tailwind custom CSS */
+.animated-bg {
+  background: linear-gradient(120deg, #6a11cb, #2575fc, #43e97b, #38f9d7);
+  background-size: 300% 300%;
+  animation: gradientWave 10s ease infinite;
+}
+
+#google_translate_element {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.goog-te-banner-frame {
+  display: none !important; /* Hides the translation banner */
+}
+
+.goog-te-gadget {
+  font-size: 14px;
+  color: #000;
+}
+
+.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+  display: none;
+}
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  position: absolute;
+  display: none;
+}
+.VIpgJd-suEOdc {
+  display: none !important;
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseImage {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulseImage {
+  animation: pulseImage 3s ease-in-out infinite;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
