@@ -19,7 +19,7 @@ const Banner1 = () => {
   };
 
   return (
-    <div id="home" className="w-[99vw] h-[86vh] bg-gray-100 overflow-hidden relative flex items-center justify-center">
+    <div id="home" className="w-full min-h-screen bg-gray-100 overflow-hidden relative flex items-center justify-center pt-24">
       {/* Desktop Images (Left & Right) */}
       <div className="absolute left-0 top-0 h-full w-1/2 hidden lg:block">
         <img
@@ -60,7 +60,7 @@ const Banner1 = () => {
       <div className="gradient-shade"></div>
 
       {/* Slide Content */}
-      <div className="slider-content absolute z-10 flex flex-col items-center text-center w-4/5">
+      <div className="slider-content absolute z-10 flex flex-col items-center text-center w-4/5 py-4 mt-16">
         {currentSlide === 1 && (
           <div className="content animate-fade-in transform transition-all duration-700 ease-in-out">
             <img

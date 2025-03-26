@@ -33,9 +33,12 @@ const LanguageSwitcher = () => {
     };
 
     return (
-        <div>
-            <h2>Select Language</h2>
-            <select value={selectedLanguage} onChange={handleLanguageChange}>
+        <div className="fixed top-0 right-0 z-[1000] p-2 bg-white rounded-bl-lg border-b border-l border-gray-200 shadow-sm mt-1">
+            <select 
+                value={selectedLanguage} 
+                onChange={handleLanguageChange}
+                className="text-sm px-2 py-1 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
                 <option value="en">English</option>
                 <option value="hi">Hindi</option>
                 <option value="te">Telugu</option>

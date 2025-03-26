@@ -16,7 +16,7 @@ const BrandScrolling = () => {
   ];
 
   return (
-    <div className="relative w-full h-full flex flex-col gap-8">
+    <div className="relative w-full flex flex-col gap-8 overflow-hidden">
       {/* First Slider (Left to Right) */}
       <div className="w-full h-full">
         <Swiper

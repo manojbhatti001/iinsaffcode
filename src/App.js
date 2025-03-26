@@ -78,154 +78,153 @@ function App() {
   console.log("Current Pathname:", location.pathname);
 
   return (
-    <>  <GoogleTranslate />
-      {/* {!isAdminRoute && <Header />} */}
+    <>
+      <GoogleTranslate />
       {!isAdminRoute &&
         !isDashboard &&
         !isReporterDashboard &&
         !isMarketerDashboard && (
           <Navbar
-          
             activeTopic={activeTopic}
             setActiveTopic={setActiveTopic}
             activeCareer={activeCareer}
             setActiveCareer={setActiveCareer}
           />
         )}
-      <ToastContainer />
-    
-      <ScrollToTop />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              activeTopic={activeTopic}
-              setActiveTopic={setActiveTopic}
-              activeCareer={activeCareer}
-              setActiveCareer={setActiveCareer}
-            />
-          }
-        />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route
-          path="/ReporterDashboard/*"
-          element={
-            <ProtectedRoute
-              element={<Repoter />}
-              allowedRoles={["Reporter", "Influencer"]}
-              userRole={userRole}
-            />
-          }
-        />
-        <Route
-          path="/repoterConference"
-          element={
-            <ProtectedRoute
-              element={<ReporterConference />}
-              allowedRoles={["Reporter", "Influencer"]}
-              userRole={userRole}
-            />
-          }
-        />
-        <Route
-          path="/InAd/*"
-          element={
-            <ProtectedRoute
-              element={<InfuAndAdv />}
-              allowedRoles={["Advertiser"]}
-              userRole={userRole}
-            />
-          }
-        />
-        <Route path="/register" element={<Register />} />
-        <Route path="/lead" element={<Lead />} />
-        <Route path="/leadStatus" element={<LeadStatus />} />
-        <Route
-          path="/getSpecificLeadDetailsReporter"
-          element={<LeadDetailsReporter />}
-        />
-        <Route
-          path="/getSpecificConferenceDetailsReporter"
-          element={<ConferenceDetailsReporter />}
-        />
-        <Route
-          path="/getSpecificConferenceDetailsReporterById"
-          element={<ConferenceDetailsReporterById />}
-        />
-        <Route path="/createConfrence" element={<PostConference />} />
-        <Route path="/getConfrence" element={<GetUserConference />} />
-        <Route
-          path="/getSpecificConfrenceDetails"
-          element={<ConferenceDetails />}
-        />
-        <Route path="/userdashboard/*" element={<UserDashboard />} />
-        <Route path="/ReporterDashboard/*" element={<ReporterDashboard />} />
-        <Route path="/InAdDashboard/*" element={<InAdDashboard />} />
-        <Route path="/createDarbar" element={<CreateDarbar />} />
-        <Route path="/getRelevantDarbar" element={<GetRelevantDarbar />} />
-        <Route
-          path="/getDarbarByReporter"
-          element={<GetDarbarByIdReporter />}
-        />
-        <Route path="/acceptedDarbar" element={<AcceptedDarbarStatus />} />
-        <Route path="/userDarbar" element={<GetUserDarbar />} />
-        <Route path="/getUserDarbarById" element={<GetUserDarbarById />} />
+      <div className="relative z-0"> {/* Changed from pt-24 to relative z-0 */}
+        <ToastContainer />
+        <ScrollToTop />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                activeTopic={activeTopic}
+                setActiveTopic={setActiveTopic}
+                activeCareer={activeCareer}
+                setActiveCareer={setActiveCareer}
+              />
+            }
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route
+            path="/ReporterDashboard/*"
+            element={
+              <ProtectedRoute
+                element={<Repoter />}
+                allowedRoles={["Reporter", "Influencer"]}
+                userRole={userRole}
+              />
+            }
+          />
+          <Route
+            path="/repoterConference"
+            element={
+              <ProtectedRoute
+                element={<ReporterConference />}
+                allowedRoles={["Reporter", "Influencer"]}
+                userRole={userRole}
+              />
+            }
+          />
+          <Route
+            path="/InAd/*"
+            element={
+              <ProtectedRoute
+                element={<InfuAndAdv />}
+                allowedRoles={["Advertiser"]}
+                userRole={userRole}
+              />
+            }
+          />
+          <Route path="/register" element={<Register />} />
+          <Route path="/lead" element={<Lead />} />
+          <Route path="/leadStatus" element={<LeadStatus />} />
+          <Route
+            path="/getSpecificLeadDetailsReporter"
+            element={<LeadDetailsReporter />}
+          />
+          <Route
+            path="/getSpecificConferenceDetailsReporter"
+            element={<ConferenceDetailsReporter />}
+          />
+          <Route
+            path="/getSpecificConferenceDetailsReporterById"
+            element={<ConferenceDetailsReporterById />}
+          />
+          <Route path="/createConfrence" element={<PostConference />} />
+          <Route path="/getConfrence" element={<GetUserConference />} />
+          <Route
+            path="/getSpecificConfrenceDetails"
+            element={<ConferenceDetails />}
+          />
+          <Route path="/userdashboard/*" element={<UserDashboard />} />
+          <Route path="/ReporterDashboard/*" element={<ReporterDashboard />} />
+          <Route path="/InAdDashboard/*" element={<InAdDashboard />} />
+          <Route path="/createDarbar" element={<CreateDarbar />} />
+          <Route path="/getRelevantDarbar" element={<GetRelevantDarbar />} />
+          <Route
+            path="/getDarbarByReporter"
+            element={<GetDarbarByIdReporter />}
+          />
+          <Route path="/acceptedDarbar" element={<AcceptedDarbarStatus />} />
+          <Route path="/userDarbar" element={<GetUserDarbar />} />
+          <Route path="/getUserDarbarById" element={<GetUserDarbarById />} />
 
-        <Route path="/voice" element={<LoginWithOtp />} />
-        <Route path="/chekVoiceStatus" element={<GetVoiceDataById />} />
-        <Route path="/raiseVoice" element={<RaiseVoice />} />
-        <Route path="/getUserRaiseVoice" element={<UserVoices />} />
-        <Route path="/reporterGetAllVoice" element={<ReporterGetAllVoice />} />
-        <Route path="/marketer" element={<MarketerRegister />} />
-        <Route path="/marketerDashboard/*" element={<MarketerDashboard />} />
-        <Route path="/advertise" element={<Advertise />} />
-        <Route path="/joinIinsaf" element={<JoinIinsaf />} />
+          <Route path="/voice" element={<LoginWithOtp />} />
+          <Route path="/chekVoiceStatus" element={<GetVoiceDataById />} />
+          <Route path="/raiseVoice" element={<RaiseVoice />} />
+          <Route path="/getUserRaiseVoice" element={<UserVoices />} />
+          <Route path="/reporterGetAllVoice" element={<ReporterGetAllVoice />} />
+          <Route path="/marketer" element={<MarketerRegister />} />
+          <Route path="/marketerDashboard/*" element={<MarketerDashboard />} />
+          <Route path="/advertise" element={<Advertise />} />
+          <Route path="/joinIinsaf" element={<JoinIinsaf />} />
 
-        {/* admin Routes */}
-        {/* <Route path="/register-superadmin" element={<AdminRegister />} /> */}
-        <Route path="/create-admin" element={<CreateAdmin />} />
-        <Route path="/admin/*" element={<AdminPanel />} />
-        <Route path="/adminLogin" element={<AdminLogin />} />
-        {/* <Route path="admin/getAllLeads" element={<GetAllLeads />} /> */}
-        {/* <Route path="admin/updateLeads" element={<UpdateLeadAdmin />} /> */}
-        <Route path="/adminregister" element={<AdminRegister />} />
-        {/* <Route path="/allAdmins" element={<AllAdmins />} /> */}
-        <Route path="/admin/getAllConference" element={<GetAllConference />} />
-        <Route path="/getSpecificLeadDetails" element={<LeadDetails />} />
-        {/* <Route
-          path="/admin/updateConference"
-          element={<UpdateConferenceAdmin />}
-        /> */}
-        {/* <Route
-          path="/admin/getConferenceStatus"
-          element={<GetConferenceStatus />}
-        /> */}
-        {/* <Route path="/admin/getLeadStatus" element={<GetLeadStatus />} /> */}
-        {/* <Route path="/adminDashboard" element={<AdminDashboard />} /> */}
-        <Route path="/admin/updateCard" element={<UpdateCard />} />
-        {/* Coupon Routes */}
-        <Route path="/couponManagement" element={<CouponManagement />} />
-        <Route path="/getReporterByIdCard" element={<IdCardDetails />} />
+          {/* admin Routes */}
+          {/* <Route path="/register-superadmin" element={<AdminRegister />} /> */}
+          <Route path="/create-admin" element={<CreateAdmin />} />
+          <Route path="/admin/*" element={<AdminPanel />} />
+          <Route path="/adminLogin" element={<AdminLogin />} />
+          {/* <Route path="admin/getAllLeads" element={<GetAllLeads />} /> */}
+          {/* <Route path="admin/updateLeads" element={<UpdateLeadAdmin />} /> */}
+          <Route path="/adminregister" element={<AdminRegister />} />
+          {/* <Route path="/allAdmins" element={<AllAdmins />} /> */}
+          <Route path="/admin/getAllConference" element={<GetAllConference />} />
+          <Route path="/getSpecificLeadDetails" element={<LeadDetails />} />
+          {/* <Route
+            path="/admin/updateConference"
+            element={<UpdateConferenceAdmin />}
+          /> */}
+          {/* <Route
+            path="/admin/getConferenceStatus"
+            element={<GetConferenceStatus />}
+          /> */}
+          {/* <Route path="/admin/getLeadStatus" element={<GetLeadStatus />} /> */}
+          {/* <Route path="/adminDashboard" element={<AdminDashboard />} /> */}
+          <Route path="/admin/updateCard" element={<UpdateCard />} />
+          {/* Coupon Routes */}
+          <Route path="/couponManagement" element={<CouponManagement />} />
+          <Route path="/getReporterByIdCard" element={<IdCardDetails />} />
 
-        {/* Darbar Routes */}
-        <Route path="/darbarRegister" element={<RegisterDarbar />} />
-        <Route path="/darbarLogin" element={<LoginDarbar />} />
-        <Route path="/getAllDarbar" element={<AdminGetAllDarbar />} />
-        <Route path="/getDarbarById" element={<DarbarDetailsByIdAdmin />} />
-        <Route path="/updateVoiceStatus" element={<UpdateVoiceStatusAdmin />} />
+          {/* Darbar Routes */}
+          <Route path="/darbarRegister" element={<RegisterDarbar />} />
+          <Route path="/darbarLogin" element={<LoginDarbar />} />
+          <Route path="/getAllDarbar" element={<AdminGetAllDarbar />} />
+          <Route path="/getDarbarById" element={<DarbarDetailsByIdAdmin />} />
+          <Route path="/updateVoiceStatus" element={<UpdateVoiceStatusAdmin />} />
 
-        {/* FAQ/TAC/ETC section */}
-        <Route path="/faqs" element={<FaqSection />} />
-      </Routes>
-      {/* {!isAdminRoute && <Footer />} */}
-      {!isAdminRoute &&
-        !isLoginPage &&
-        !isRegisterPage &&
-        !isDashboard &&
-        !isReporterDashboard &&
-        !isMarketerDashboard && <Footer />}
+          {/* FAQ/TAC/ETC section */}
+          <Route path="/faqs" element={<FaqSection />} />
+        </Routes>
+        {!isAdminRoute &&
+          !isLoginPage &&
+          !isRegisterPage &&
+          !isDashboard &&
+          !isReporterDashboard &&
+          !isMarketerDashboard && <Footer />}
+      </div>
     </>
   );
 }

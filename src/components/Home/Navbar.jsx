@@ -127,13 +127,11 @@ const Navbar = ({ activeTopic, setActiveTopic, activeCareer, setActiveCareer }) 
 
   return (
     <nav
-      className={`fixed top-10 left-0 w-full w-full z-[999] ${
-        visible ? 'translate-y-0' : '-translate-y-full'
-      }`}
+      className="fixed top-8 left-0 w-full z-[999]"
       ref={sidebarRef}
     >
-      <div className="w-[70%] md:w-[85%] mr-auto ml-[10%] ">
-        <div className="bg-white/80 backdrop-blur-lg shadow-lg rounded-2xl px-6 py-3 shadow-black/10">
+      <div className="w-[70%] md:w-[85%] mr-auto ml-[10%] py-2">
+        <div className="px-6 py-3 rounded-2xl border border-gray-200 shadow-sm bg-white/95">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <Link to="/" className="flex items-center">

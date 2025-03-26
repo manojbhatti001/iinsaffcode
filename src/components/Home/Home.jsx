@@ -20,19 +20,17 @@ const Home = ({
   setActiveCareer,
 }) => {
   return (
-    <>
-      <div className="bg-gradient-to-r from-blue-100 via-blue-400 to-[#f2effd]">
-        {/* <HomeImageSlider /> */}
+    <div className="relative w-full overflow-x-hidden">
+      <div className="bg-gradient-to-r from-blue-100 via-blue-400 to-[#f2effd] w-full">
         <Banner1 />
-        <div className="flex items-center justify-center">
-          <div className=" marqueenew w-full text-3xl">
+        <div className="flex items-center justify-center w-full">
+          <div className="marqueenew w-full text-3xl">
             <span>
-            IINSAF is a leading platform dedicated to promoting social justice through innovative technological solutions.
+              IINSAF is a leading platform dedicated to promoting social justice through innovative technological solutions.
             </span>
           </div>
         </div>
 
-        {/* <ServicesSection/> */}
         <Services
           activeCareer={activeCareer}
           setActiveCareer={setActiveCareer}
@@ -42,19 +40,15 @@ const Home = ({
           activeTopic={activeTopic}
           setActiveTopic={setActiveTopic}
         />
-
-
-
         <OwerClientSlider />
         <WhyUs />
         <Card />
         <BrandScrolling />
         <OrganizationScrolling />
-        {/* <JoinIinsaf /> */}
         <AboutUs />
         <ContactUs />
       </div>
-    </>
+    </div>
   );
 };
 

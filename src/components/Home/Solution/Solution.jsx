@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Solution = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-800 via-blue-700 to-black flex flex-col items-center justify-center p-4 lg:p-12" >
+    <div className="bg-gradient-to-r from-purple-800 via-blue-700 to-black flex flex-col items-center justify-center p-4 lg:p-12 w-full">
       {/* Intro Section */}
       <div className="intro-section text-center mb-16">
         <div className="line-decorator mb-5 bg-orange-500 w-20 h-1 mx-auto"></div>

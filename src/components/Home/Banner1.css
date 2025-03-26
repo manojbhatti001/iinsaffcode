@@ -53,6 +53,23 @@
   .slider-content {
     max-width: 600px;
     text-align: center;
+    margin: 2rem auto;
+  }
+
+  .content {
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  @media (max-height: 768px) {
+    .slider-content {
+      margin: 1rem auto;
+    }
+    
+    .content img {
+      max-height: 120px;
+      width: auto;
+    }
   }
   
   .quote-btn, .quote-btn1 {

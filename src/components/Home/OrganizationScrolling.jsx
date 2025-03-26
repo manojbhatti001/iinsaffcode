@@ -81,7 +81,7 @@ const OrganizationScrolling = () => {
   ];
 
   return (
-    <div className="relative w-full h-full flex flex-col gap-4 bg-gradient-to-r from-blue-600 via-black to-purple-700 pb-6">
+    <div className="relative w-full flex flex-col gap-4 bg-gradient-to-r from-blue-600 via-black to-purple-700 pb-6 overflow-hidden">
       <h1 className="text-3xl font-bold text-white text-center pt-6">iinsaf Organization</h1>
 
       {/* Search Input */}
@@ -147,20 +147,23 @@ const OrganizationScrolling = () => {
                   disableOnInteraction: false,
                 }}
                 pagination={{ clickable: true }}
-                className="mySwiper"
+                className="mySwiper max-w-full"
                 style={{ transitionTimingFunction: "linear !important" }}
                 breakpoints={{
                   // Below 640px, show 1 slide
                   0: {
                     slidesPerView: 1, // Show only 1 slide on smaller screens (including 425px)
+                    spaceBetween: 10,
                   },
                   // For screens 640px and above, show 2 slides
                   640: {
                     slidesPerView: 2, // Show 2 slides on medium screens
+                    spaceBetween: 20,
                   },
                   // For larger screens (1024px), show 3 slides
                   1024: {
                     slidesPerView: 4, // Show 3 slides on larger screens
+                    spaceBetween: 30,
                   },
                 }}
               >
