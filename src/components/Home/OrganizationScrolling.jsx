@@ -81,7 +81,7 @@ const OrganizationScrolling = () => {
   ];
 
   return (
-    <div className="relative w-full flex flex-col gap-4 bg-gradient-to-r from-blue-600 via-black to-purple-700 pb-6 overflow-hidden">
+    <div className="relative w-full flex flex-col gap-4 bg-gradient-to-r bg-white pb-6 overflow-hidden">
       <h1 className="text-3xl font-bold text-white text-center pt-6">iinsaf Organization</h1>
 
       {/* Search Input */}

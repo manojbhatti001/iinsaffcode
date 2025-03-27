@@ -18,7 +18,7 @@ const BrandScrolling = () => {
   return (
     <div className="relative w-full flex flex-col gap-8 overflow-hidden">
       {/* First Slider (Left to Right) */}
-      <div className="w-full h-full">
+      <div className="w-full h-full mt-8">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
@@ -36,9 +36,9 @@ const BrandScrolling = () => {
           {brands.map((brand) => (
             <SwiperSlide
               key={brand.id}
-              className="text-center text-lg font-semibold bg-white flex flex-col items-center justify-center p-4 h-[300px] border shadow-md"
+              className="text-center text-lg font-bold rounded-lg bg-white flex flex-col items-center justify-center p-4 h-[300px] border shadow-md"
             >
-                <span className="text-3xl text-gray-500">Logo</span> {/* Placeholder logo */}
+                <span className="text-3xl text-3xl text-black"><span className='text-red-600'>II</span>NSAF</span> {/* Placeholder logo */}
             </SwiperSlide>
           ))}
         </Swiper>
@@ -65,9 +65,9 @@ const BrandScrolling = () => {
           {brands.map((brand) => (
             <SwiperSlide
               key={brand.id}
-              className="text-center text-lg font-semibold bg-white flex flex-col items-center justify-center p-4 h-[300px] border shadow-md"
+              className="text-center text-lg font-bold rounded-lg bg-white flex flex-col items-center justify-center p-4 h-[300px] border shadow-md"
             >
-                <span className="text-3xl text-gray-500">Logo</span> {/* Placeholder logo */}
+                <span className="text-3xl text-black"><span className='text-red-600'>II</span>NSAF</span> {/* Placeholder logo */}
             </SwiperSlide>
           ))}
         </Swiper>

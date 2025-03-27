@@ -94,6 +94,18 @@ const Services = ({ activeCareer, setActiveCareer }) => {
       image: marketerIcon,
       link: "/Newspaper"
     },
+
+    //website
+    {
+      title: "Website",
+      description:
+        "",
+      bgColor: "bg-red-100",
+      iconBgColor: "bg-red-500",
+      iconColor: "text-red-600",
+      image: marketerIcon,
+      link: "/"
+    },
   ];
 
   const getServiceComponent = () => {
@@ -153,25 +165,57 @@ const Services = ({ activeCareer, setActiveCareer }) => {
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className={`flex items-center gap-3 ${
-              service.bgColor
-            } p-2 w-full rounded-lg shadow-md relative ${
-              index === 1
-                ? "ml-0 lg:ml-10"
-                : index === 2
-                ? "ml-0 lg:ml-20"
-                : index === 3
-                ? "ml-0 lg:ml-10"
-                : "ml-0"
-            } rounded-r-full cursor-pointer ${
-              activeService === service.title
-                ? "border-2 border-blue-600"
-                : "border-transparent"
-            }`}
+            className={`
+              flex items-center gap-3 
+              ${service.bgColor} 
+              p-2 w-full 
+              rounded-lg shadow-md 
+              relative 
+              transition-all
+              duration-300
+              hover:scale-105
+              ${
+                index === 0
+                  ? "-ml-32"
+                  : index === 1
+                  ? "ml-0 lg:-ml-12"
+                  : index === 2
+                  ? "ml-0 lg:ml-4"
+                  : index === 3
+                  ? "ml-0 lg:ml-14"
+                  : index === 4
+                  ? "ml-0 lg:ml-4"
+                  : index === 5
+                  ? "ml-0 lg:-ml-12"
+                  : index === 6  
+                  ? "ml-0 lg:-ml-32"
+                  : "ml-0"
+              } 
+              rounded-r-full 
+              cursor-pointer 
+              ${
+                activeService === service.title
+                  ? "border-2 border-blue-600"
+                  : "border-transparent"
+              }
+            `}
             onClick={() => handleServiceClick(service)}
           >
             <div
-              className={`${service.iconBgColor} text-white p-2 rounded-full absolute w-[60px] h-[60px] flex items-center justify-center left-[-20px] border-2 border-dotted ${service.iconColor}`}
+              className={`
+                ${service.iconBgColor} 
+                text-white p-2 
+                rounded-full 
+                absolute 
+                w-[60px] h-[60px] 
+                flex items-center justify-center 
+                left-[-20px] 
+                border-2 border-dotted 
+                ${service.iconColor}
+                transition-transform
+                duration-300
+                hover:rotate-12
+              `}
             >
               <div className="border-2 border-dashed rounded-full border-white-500 shadow-lg p-1">
                 <img
